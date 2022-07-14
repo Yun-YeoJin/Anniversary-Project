@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9xJ-eT-lxJ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -18,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="2Sd-nJ-Ofi">
-                                <rect key="frame" x="0.0" y="74" width="414" height="300"/>
+                                <rect key="frame" x="0.0" y="118" width="414" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="QKK-dF-RBI"/>
                                 </constraints>
                             </datePicker>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="RYs-Uy-gd0">
-                                <rect key="frame" x="20" y="404" width="374" height="180"/>
+                                <rect key="frame" x="20" y="448" width="374" height="180"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wpq-nN-Vhi">
                                         <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
@@ -80,7 +79,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="날짜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0e-Ip-Bmh">
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="날짜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0e-Ip-Bmh">
                                                 <rect key="frame" x="75.5" y="80" width="29.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -103,7 +102,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="R9T-8L-l5I">
-                                <rect key="frame" x="20" y="614" width="374" height="180"/>
+                                <rect key="frame" x="20" y="658" width="374" height="180"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DQQ-UH-mBn">
                                         <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
@@ -123,7 +122,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="날짜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z36-Cb-WWv">
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="날짜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z36-Cb-WWv">
                                                 <rect key="frame" x="75.5" y="80" width="29.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -161,7 +160,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="날짜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzk-Ka-ACR">
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="날짜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzk-Ka-ACR">
                                                 <rect key="frame" x="75.5" y="80" width="29.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -202,6 +201,7 @@
                             <constraint firstItem="RYs-Uy-gd0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="nH0-yz-Sl5"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ty9-EM-ukO"/>
                     <connections>
                         <outlet property="DatePicker" destination="2Sd-nJ-Ofi" id="idM-Q1-sLB"/>
                         <outlet property="Day100DateLabel" destination="El9-QU-EB9" id="mYL-OX-1Cs"/>
@@ -216,11 +216,33 @@
                         <outlet property="Day400DateLabel" destination="vzk-Ka-ACR" id="TVg-bQ-s13"/>
                         <outlet property="Day400Image" destination="XXF-MA-6Xe" id="PTM-hd-LAt"/>
                         <outlet property="Day400Label" destination="ODA-F0-xw3" id="DaE-o7-VRJ"/>
+                        <outletCollection property="DayCollection" destination="El9-QU-EB9" collectionClass="NSMutableArray" id="UWA-3Z-DCz"/>
+                        <outletCollection property="DayCollection" destination="F0e-Ip-Bmh" collectionClass="NSMutableArray" id="hMa-EV-c8y"/>
+                        <outletCollection property="DayCollection" destination="Z36-Cb-WWv" collectionClass="NSMutableArray" id="O2B-Uc-xNL"/>
+                        <outletCollection property="DayCollection" destination="vzk-Ka-ACR" collectionClass="NSMutableArray" id="Wbq-f9-RGF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="15.942028985507248" y="93.75"/>
+            <point key="canvasLocation" x="517" y="94"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CzI-wx-ycO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9xJ-eT-lxJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NTd-Um-5YR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bwo-sR-dY9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9uK-yF-ogc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-348" y="94"/>
         </scene>
     </scenes>
     <resources>
