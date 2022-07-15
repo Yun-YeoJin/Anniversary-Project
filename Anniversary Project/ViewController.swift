@@ -3,68 +3,61 @@ import UIKit
 import Foundation
 
 
-
-
 class ViewController: UIViewController {
 
     
-    @IBOutlet weak var Day100Label: UILabel!
-    @IBOutlet weak var Day200Label: UILabel!
-    @IBOutlet weak var Day300Label: UILabel!
-    @IBOutlet weak var Day400Label: UILabel!
-    @IBOutlet weak var Day100DateLabel: UILabel!
-    @IBOutlet weak var Day200DateLabel: UILabel!
-    @IBOutlet weak var Day300DateLabel: UILabel!
-    @IBOutlet weak var Day400DateLabel: UILabel!
-    @IBOutlet weak var Day100Image: UIImageView!
-    @IBOutlet weak var Day300Image: UIImageView!
-    @IBOutlet weak var Day200Image: UIImageView!
-    @IBOutlet weak var Day400Image: UIImageView!
+    @IBOutlet var DayImageCollection: [UIImageView]!
     
-    
+    @IBOutlet var D_DayLabelCollection: [UILabel]!
     @IBOutlet var DayCollection: [UILabel]!
     
     @IBOutlet weak var DatePicker: UIDatePicker!
+
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //DatePicker 스타일 -> 인라인으로 변경
+        DatePicker.preferredDatePickerStyle = .inline
         
-        LabelDesign(Day100Label, "100")
-        LabelDesign(Day200Label, "200")
-        LabelDesign(Day300Label, "300")
-        LabelDesign(Day400Label, "400")
-        DateLabelDesign(Day100DateLabel)
-        DateLabelDesign(Day200DateLabel)
-        DateLabelDesign(Day300DateLabel)
-        DateLabelDesign(Day400DateLabel)
-        ImageDesign(Day100Image)
-        ImageDesign(Day200Image)
-        ImageDesign(Day300Image)
-        ImageDesign(Day400Image)
-        DateSetting()
+        LabelDesign()
+        ImageDesign()
+        DateLabelDesign()
         
+        // 현재 날짜에서 D+100, D+200, D+300, D+400 표시해놓기
+        for i in 0...DayCollection.count-1{
+            CalculateDay(i, (i+1)*100)
+        }
+       
     }
     
-    func LabelDesign(_ DayLabel: UILabel, _ Text: String) {
-        DayLabel.text = "D+" + Text
-        DayLabel.textColor = .white
-        DayLabel.font = UIFont.boldSystemFont(ofSize: 20)
+    // D_Day 레이블 설정
+    func LabelDesign() {
+        for i in D_DayLabelCollection {
+        i.textColor = .white
+        i.font = UIFont.boldSystemFont(ofSize: 20)
     }
-    
-    func DateLabelDesign(_ DateLabel: UILabel) {
-        DateLabel.textColor = .white
-        DateLabel.font = UIFont.boldSystemFont(ofSize: 18)
-
     }
-
-    func ImageDesign(_ ImageNumber: UIImageView) {
-        ImageNumber.layer.cornerRadius = 15
-        ImageNumber.layer.borderWidth = 2
-        ImageNumber.layer.borderColor = UIColor.clear.cgColor
-        ImageNumber.clipsToBounds = true
-        
+    // D+100, D+200, D+300, D+400 레이블 설정
+    func DateLabelDesign() {
+        for i in DayCollection {
+        i.textColor = .white
+        i.font = UIFont.boldSystemFont(ofSize: 18)
+        }
+    }
+    // 이미지 설정
+    func ImageDesign() {
+        for i in DayImageCollection {
+        i.layer.cornerRadius = 15
+        i.layer.borderWidth = 2
+        i.layer.borderColor = UIColor.clear.cgColor
+        i.clipsToBounds = true
+        }
+    }
+    // DatePicker에서 정한 날짜로 디데이 계산하기.
+    func CalculateDay(_ i: Int, _ a: Int) {
+        DayCollection[i].text = "\(DatePicker.calendar.date(byAdding: .day, value: a, to: DatePicker.date)?.formatted(date: .long, time: .omitted) ?? DatePicker.date.formatted(date: .long, time: .omitted))"
     }
     
     //dateFormat 바꾸는 방법 1 (Date -> String)
@@ -75,26 +68,17 @@ class ViewController: UIViewController {
          formatter.dateFormat = "yyyy년 MM월 dd일" //표시방법
          return formatter.string(from: curDate)
      }
-    //dateFormat 바꾸는 방법 2
-    func DateSetting() {
-        let date = Date()
-        let hundreddate = Date() + TimeInterval(8640000)
-        let twohundreddate = hundreddate + TimeInterval(8640000)
-        let threehundreddate = twohundreddate + TimeInterval(8640000)
-        let fourhundreddate = threehundreddate + TimeInterval(8640000)
-        
-        let formatter = DateFormatter()
-        formatter.timeZone = .current
-        formatter.locale = .current
-        formatter.dateFormat = "yyyy년 MM월 dd일"
-        Day100DateLabel.text = formatter.string(from: hundreddate)
-        Day200DateLabel.text = formatter.string(from: twohundreddate)
-        Day300DateLabel.text = formatter.string(from: threehundreddate)
-        Day400DateLabel.text = formatter.string(from: fourhundreddate)
+   
+   // DatePicker에서 날짜 수정했을 때 디데이 변경
+    @IBAction func datePickerChanged(_ sender: UIDatePicker) {
+
+        for number in 0...DayCollection.count-1 {
+            CalculateDay(number, (number+1)*100)
+        }
         
     }
     
-  
+    
 }
 //String -> Date로 변환
 //let dateStr = "2020-08-13 16:30" // Date 형태의 String
@@ -104,8 +88,8 @@ class ViewController: UIViewController {
 //dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
 //
 //let convertDate = dateFormatter.date(from: dateStr) // Date 타입으로 변환
-
-//Date -> String으로 변환
+//
+////Date -> String으로 변환
 //let myDateFormatter = DateFormatter()
 //myDateFormatter.dateFormat = "yyyy.MM.dd a hh시 mm분"
 //myDateFormatter.locale = Locale(identifier:"ko_KR") // PM, AM을 언어에 맞게 setting (ex: PM -> 오후)

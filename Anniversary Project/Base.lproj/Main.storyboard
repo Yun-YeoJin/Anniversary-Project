@@ -21,6 +21,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="QKK-dF-RBI"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="datePickerChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="WOW-n7-NN9"/>
+                                </connections>
                             </datePicker>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="RYs-Uy-gd0">
                                 <rect key="frame" x="20" y="448" width="374" height="180"/>
@@ -34,7 +37,7 @@
                                                     <constraint firstAttribute="width" secondItem="uxo-SA-OZS" secondAttribute="height" id="RXo-zs-5bk"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D-DAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yyt-hF-iuh">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D+100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yyt-hF-iuh">
                                                 <rect key="frame" x="10" y="10" width="80" height="20.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="zGO-rF-wRa"/>
@@ -70,7 +73,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D-DAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdy-TF-Kqt">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D+200" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdy-TF-Kqt">
                                                 <rect key="frame" x="10" y="10" width="80" height="20.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="dui-wb-xan"/>
@@ -113,7 +116,7 @@
                                                     <constraint firstAttribute="width" secondItem="CHD-XD-ccV" secondAttribute="height" multiplier="1:1" id="owk-LQ-yNX"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D-DAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlV-dj-kCq">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D+300" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlV-dj-kCq">
                                                 <rect key="frame" x="10" y="10" width="80" height="20.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="60Z-ob-HJi"/>
@@ -151,7 +154,7 @@
                                                     <constraint firstAttribute="width" secondItem="XXF-MA-6Xe" secondAttribute="height" multiplier="1:1" id="FWv-Hp-INS"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D-DAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODA-F0-xw3">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D+400" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODA-F0-xw3">
                                                 <rect key="frame" x="10" y="10" width="80" height="20.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="zvx-Re-zK0"/>
@@ -204,22 +207,18 @@
                     <navigationItem key="navigationItem" id="ty9-EM-ukO"/>
                     <connections>
                         <outlet property="DatePicker" destination="2Sd-nJ-Ofi" id="idM-Q1-sLB"/>
-                        <outlet property="Day100DateLabel" destination="El9-QU-EB9" id="mYL-OX-1Cs"/>
-                        <outlet property="Day100Image" destination="uxo-SA-OZS" id="7lj-2Y-TXH"/>
-                        <outlet property="Day100Label" destination="Yyt-hF-iuh" id="GEC-IQ-DF6"/>
-                        <outlet property="Day200DateLabel" destination="F0e-Ip-Bmh" id="4Ex-WP-OQ7"/>
-                        <outlet property="Day200Image" destination="U2u-er-i0R" id="UdL-M1-Exo"/>
-                        <outlet property="Day200Label" destination="kdy-TF-Kqt" id="p7i-sW-Pcg"/>
-                        <outlet property="Day300DateLabel" destination="Z36-Cb-WWv" id="ffl-HV-qN4"/>
-                        <outlet property="Day300Image" destination="CHD-XD-ccV" id="MT3-SN-CX8"/>
-                        <outlet property="Day300Label" destination="vlV-dj-kCq" id="QUb-MN-CGt"/>
-                        <outlet property="Day400DateLabel" destination="vzk-Ka-ACR" id="TVg-bQ-s13"/>
-                        <outlet property="Day400Image" destination="XXF-MA-6Xe" id="PTM-hd-LAt"/>
-                        <outlet property="Day400Label" destination="ODA-F0-xw3" id="DaE-o7-VRJ"/>
                         <outletCollection property="DayCollection" destination="El9-QU-EB9" collectionClass="NSMutableArray" id="UWA-3Z-DCz"/>
                         <outletCollection property="DayCollection" destination="F0e-Ip-Bmh" collectionClass="NSMutableArray" id="hMa-EV-c8y"/>
                         <outletCollection property="DayCollection" destination="Z36-Cb-WWv" collectionClass="NSMutableArray" id="O2B-Uc-xNL"/>
                         <outletCollection property="DayCollection" destination="vzk-Ka-ACR" collectionClass="NSMutableArray" id="Wbq-f9-RGF"/>
+                        <outletCollection property="DayImageCollection" destination="uxo-SA-OZS" collectionClass="NSMutableArray" id="mNb-IT-q8N"/>
+                        <outletCollection property="DayImageCollection" destination="U2u-er-i0R" collectionClass="NSMutableArray" id="cQy-ml-Ob2"/>
+                        <outletCollection property="DayImageCollection" destination="CHD-XD-ccV" collectionClass="NSMutableArray" id="sBD-Jn-tOl"/>
+                        <outletCollection property="DayImageCollection" destination="XXF-MA-6Xe" collectionClass="NSMutableArray" id="Ugw-Ar-9xm"/>
+                        <outletCollection property="D_DayLabelCollection" destination="Yyt-hF-iuh" collectionClass="NSMutableArray" id="yTs-a2-k6T"/>
+                        <outletCollection property="D_DayLabelCollection" destination="kdy-TF-Kqt" collectionClass="NSMutableArray" id="ZwQ-Bf-2zu"/>
+                        <outletCollection property="D_DayLabelCollection" destination="vlV-dj-kCq" collectionClass="NSMutableArray" id="FiT-PC-n3B"/>
+                        <outletCollection property="D_DayLabelCollection" destination="ODA-F0-xw3" collectionClass="NSMutableArray" id="Hf9-38-Tl3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
